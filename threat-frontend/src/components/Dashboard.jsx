@@ -76,7 +76,7 @@ const Dashboard = () => {
         <footer className="bg-gray-900 border-t border-gray-800 px-6 py-4">
           <div className="flex items-center justify-between text-sm text-gray-400">
             <div className="flex items-center gap-4">
-              <span>© 2024 AI Threat Detection System</span>
+              <span>© 2025 AI Threat Detection System</span>
               <div className="h-4 w-px bg-gray-700"></div>
               <span>Backend: {import.meta.env.DEV ? 'localhost:8000' : import.meta.env.VITE_BACKEND_URL}</span>
               <div className="h-4 w-px bg-gray-700"></div>
@@ -163,4 +163,5 @@ const NavbarContent = ({ stats, isConnected }) => {
 };
 
 export default Dashboard;
+
 
