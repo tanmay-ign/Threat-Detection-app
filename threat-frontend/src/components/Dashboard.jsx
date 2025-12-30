@@ -16,10 +16,15 @@ const Dashboard = () => {
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       return `${protocol}//${window.location.host}/ws/alerts`;
     } else {
-    
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+      // Handle undefined or empty backend URL
+      if (!backendUrl) {
+        console.warn('[Dashboard] Backend URL is not defined, using localhost');
+        return 'ws://localhost:8000/ws/alerts';
+      }
       const wsUrl = backendUrl.replace(/^http/, 'ws').replace(/^https/, 'wss');
       return `${wsUrl}/ws/alerts`;
+
     }
   };
 
@@ -158,3 +163,4 @@ const NavbarContent = ({ stats, isConnected }) => {
 };
 
 export default Dashboard;
+
