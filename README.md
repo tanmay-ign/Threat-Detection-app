@@ -1,4 +1,5 @@
-## 🔗 Live Demo [https://threat-detection-system.vercel.app] # 🛡️ Smart Threat Detection System
+## 🔗 Live Demo https://threat-detection-system.vercel.app
+# 🛡️ Smart Threat Detection System
 
 Real-time AI threat detection system that identifies weapons, unattended bags, and persons with intelligent threat classification and instant alerts.
 
@@ -142,5 +143,6 @@ MIT License
 ---
 
 **Built with ❤️ for enhanced security**
+
 
 
