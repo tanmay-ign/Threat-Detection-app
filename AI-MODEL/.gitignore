@@ -1,0 +1,45 @@
+# Model weights (too large for GitHub)
+*.pt
+*.pth
+*.onnx
+*.weights
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Saved frames and outputs
+saved_frames/
+output/
+results/
+runs/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
