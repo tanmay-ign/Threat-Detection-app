@@ -31,7 +31,16 @@ const Home = () => {
     }
   }, []);
 
-  const { isConnected } = useWebSocket(`${import.meta.env.VITE_BACKEND_URL.replace('http', 'ws')}/ws/alerts`, handleWebSocketMessage);
+   const getWebSocketUrl = () => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+    if (!backendUrl) {
+      return 'ws://localhost:8000/ws/alerts';
+    }
+    return `${backendUrl.replace(/^http/, 'ws').replace(/^https/, 'wss')}/ws/alerts`;
+  };
+
+  const { isConnected } = useWebSocket(getWebSocketUrl(), handleWebSocketMessage);
+
 
   useEffect(() => {
     if ('Notification' in window && Notification.permission === 'default') {
@@ -123,3 +132,4 @@ const Home = () => {
 };
 
 export default Home;
+
