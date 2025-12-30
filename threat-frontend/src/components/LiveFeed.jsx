@@ -61,7 +61,13 @@ const LiveFeed = () => {
             Live Surveillance Feed
           </h2>
           <div className="flex items-center gap-3">
-         
+            {!hasError && !isLoading && (
+              <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full">
+                Connected
+              </span>
+            )}
+          </div>
+        </div>
 
         {/* Camera Selector and Info */}
         <div className="flex items-center justify-between">
@@ -164,4 +170,3 @@ const LiveFeed = () => {
 };
 
 export default LiveFeed;
-
